@@ -12,26 +12,16 @@ public class SelectionSortArray {
             System.out.print(a[i] + " ");
         }
         display(a);
-        for (int j = size - 1; j > 0; j--) {
-            int bigPos = j;
-            for (int i = 0; i < a.length; i++){
-                if (a[bigPos] < a[i]){
-                    bigPos = i;
-                    int last = a[j];
-                    a[j] = a[bigPos];
-                    a[bigPos] = last;
-                }
+        int bigPos = 0;
+
+        for (int i = 1; i < a.length; i++) {
+            if (a[bigPos] < a[i]) {
+                bigPos = i;
             }
         }
+        System.out.println("The index with the biggest value is: " + bigPos);
         display(a);
-//        int bigPos = 0;
-//
-//        for (int i = 1; i < a.length; i++) {
-//            if (a[bigPos] < a[i]) {
-//                bigPos = i;
-//            }
-//        }
-//        System.out.println("The index with the biggest value is: " + bigPos);
+
     }
 
     public static void display(int[] a) {
