@@ -12,14 +12,17 @@ public class SelectionSortArray {
             System.out.print(a[i] + " ");
         }
         display(a);
-        int bigPos = 0;
-
-        for (int i = 1; i < a.length; i++) {
-            if (a[bigPos] < a[i]) {
-                bigPos = i;
+        for (int workingSize = size; workingSize > 0; workingSize-- ) {
+            int bigPos = 0;
+            for (int i = 1; i < a.length; i++) {
+                if (a[bigPos] < a[i]) {
+                    bigPos = i;
+                }
             }
+            int last = a[bigPos];
+            a[bigPos] = a[size - 1];
+            a[size - 1] = last;
         }
-        System.out.println("The index with the biggest value is: " + bigPos);
         display(a);
 
     }
