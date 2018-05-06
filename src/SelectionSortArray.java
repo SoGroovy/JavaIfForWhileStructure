@@ -24,18 +24,13 @@ public class SelectionSortArray {
 //            display(a);
 //        }
         int bigPos = 0;
-        for (int j = size - 1; j > 0; j--) {
-            for (int i = 1; i < size; i++) {
+
+            for (int i = 1; i < a.length; i++) {
                 if (a[bigPos] < a[i]) {
                     bigPos = i;
-
                 }
-                int last = a[bigPos];
-                a[bigPos] = a[j];
-                a[j] = last;
-            }
         }
-//        System.out.println("The index with the biggest value is: " + bigPos);
+        System.out.println("The index with the biggest value is: " + bigPos);
     }
 
     public static void display(int[] a) {
