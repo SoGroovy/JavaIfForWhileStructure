@@ -12,17 +12,17 @@ public class SelectionSortArray {
             System.out.print(a[i] + " ");
         }
         display(a);
-//        for (int j = size - 1; j > 0; j--) {
-//            int index = j;
-//            for (int i = 0; i < size - 1 ; i++) {
-//                if (a[i] > a[index]) {
-//                    int biggerNumber = a[i];
-//                    a[i] = a[index];
-//                    a[index] = biggerNumber;
-//                }
-//            }
-//            display(a);
-//        }
+        for (int j = size - 1; j > 0; j--) {
+            int index = j;
+            for (int i = 0; i < size - 1 ; i++) {
+                if (a[i] > a[index]) {
+                    int biggerNumber = a[i];
+                    a[i] = a[index];
+                    a[index] = biggerNumber;
+                }
+            }
+            display(a);
+        }
 //        int bigPos = 0;
 //
 //        for (int i = 1; i < a.length; i++) {
