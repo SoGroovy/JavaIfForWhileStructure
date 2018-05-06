@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SelectionSourceArray {
+public class SelectionSortArray {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Input a value: ");
