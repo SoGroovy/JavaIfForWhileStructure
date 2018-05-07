@@ -19,8 +19,9 @@ public class SecondBiggestInt {
 
     public static int secondLargest(int[] a) {
             int max = a[0];
-            int secondMax =0;
+            int secondMax =a[1];
             for (int i = 1; i < a.length; i++) {
+                if (a[i] > max)
                 if (max < a[i]) {
                     secondMax = max;
                     max = a[i];
