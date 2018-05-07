@@ -2,14 +2,16 @@ import java.util.Scanner;
 
 public class SecondBiggestInt {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Input value here: ");
-        int size = scanner.nextInt();
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Input value here: ");
+//        int size = scanner.nextInt();
 
-        int[] a = new int[size];
-        for (int i = 0; i < size; i++) {
-            a[i] = (int) (Math.random() * 100 - 50);
+        int[] a = new int[6];
+        int start = 9;
+        for (int i = 0; i < 6; i++) {
+            a[i] = start;
             System.out.print(a[i] + " ");
+            start--;
         }
         System.out.println();
         System.out.println("The second largest number in the array is: " + secondLargest(a));
