@@ -8,7 +8,7 @@ public class SecondBiggestInt {
 
         int[] a = new int[size];
         for (int i = 0; i < size; i++) {
-            a[i] = (int) (Math.random() * 100);
+            a[i] = (int) (Math.random() * 100 - 50);
             System.out.print(a[i] + " ");
         }
         System.out.println();
