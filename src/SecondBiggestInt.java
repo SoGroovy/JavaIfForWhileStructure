@@ -7,7 +7,7 @@ public class SecondBiggestInt {
 //        int size = scanner.nextInt();
 
         int[] a = new int[6];
-        int start = 9;
+        int start = -1;
         for (int i = 0; i < 6; i++) {
             a[i] = start;
             System.out.print(a[i] + " ");
