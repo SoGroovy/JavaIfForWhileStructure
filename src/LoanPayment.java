@@ -31,7 +31,8 @@ public class LoanPayment {
         double monthsToFreedom = 0;
         double finalAmount = loan;
         for(finalAmount = loan; finalAmount >= 0; finalAmount - monthPay) {
-            finalAmount = (interestR / 12) * finalAmount;
+            double interest = (interestR / 12) * finalAmount;
+            finalAmount = finalAmount + interest - monthPay;
             monthsToFreedom++;
         }
 
