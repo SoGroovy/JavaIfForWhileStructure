@@ -21,11 +21,11 @@ public class LoanPayment {
         System.out.println("It will take " + done(loan, interestR, monthPay) + "(s) to finish paying off the loan.");
     }
 
-    public static double done(double a, double b, double c) {
-        double months = (a/c);
-        double interestaccrue = (a)*(months * ((b/12)/100));
-        double finalAmount = interestaccrue + a;
-        double monthsToFreedom = Math.ceil(finalAmount / c);
+    public static double done(double loan, double interestR, double monthPay) {
+        double months = (loan/monthPay);
+        double interestaccrue = (loan)*(months * ((interestR/12)/100));
+        double finalAmount = interestaccrue + loan;
+        double monthsToFreedom = Math.ceil(finalAmount / monthPay);
 
         return monthsToFreedom;
     }
