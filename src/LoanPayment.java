@@ -18,14 +18,22 @@ public class LoanPayment {
         System.out.println("The loan amount due is $" + loan);
         System.out.println("The interest rate is " + interestR + "%");
         System.out.println("The payment due each month is $" + monthPay);
-        System.out.println("It will take " + done(loan, interestR, monthPay) + "(s) to finish paying off the loan.");
+        System.out.println("It will take " + done(loan, interestR, monthPay) + " month(s) to finish paying off the loan.");
     }
 
     public static double done(double loan, double interestR, double monthPay) {
-        double months = (loan/monthPay);
-        double interestaccrue = (loan)*(months * ((interestR/12)/100));
-        double finalAmount = interestaccrue + loan;
-        double monthsToFreedom = Math.ceil(finalAmount / monthPay);
+//        double months = (loan/monthPay);
+//        double interestaccrue = (loan)*(months * ((interestR/12)/100));
+//        double finalAmount = interestaccrue + loan;
+//        double monthsToFreedom = Math.ceil(finalAmount / monthPay);
+//
+//        return monthsToFreedom;
+        double monthsToFreedom = 0;
+        double finalAmount = loan;
+        for(finalAmount = loan; finalAmount >= 0; finalAmount - monthPay) {
+            finalAmount = (interestR / 12) * finalAmount;
+            monthsToFreedom++;
+        }
 
         return monthsToFreedom;
     }
